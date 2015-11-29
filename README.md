@@ -35,22 +35,22 @@ MageBox is a dead simple [Vagrant][1] LAMP Box for [Magento][2] 2 Development wi
 ## Basic Vagrant Commands
 Here are some useful basic vagrant commands.
 
-### Start or resume your server
+#### Start or resume your server
 ```bash
 vagrant up
 ```
 
-### Pause your server
+#### Pause your server
 ```bash
 vagrant suspend
 ```
 
-### Delete your server
+#### Delete your server
 ```bash
 vagrant destroy
 ```
 
-### SSH into your server
+#### SSH into your server
 ```bash
 vagrant ssh
 ```
@@ -65,12 +65,17 @@ To set hostname, just add a record like the following example to your computer's
 
 ## Database Access
 
-### MySQL 
-
+#### MySQL 
 - Hostname: localhost or 127.0.0.1
 - Username: root
 - Password: mysql
 - Database: magebox
+
+#### PhpMyAdmin
+Access PhpMyAdmin at [http://192.168.20.10/phpmyadmin/](http://192.168.20.10/phpmyadmin/)
+- Username: root
+- Password: mysql
+
 
 ## SSH Access
 User simple command for ssh into box ``` vagrant ssh ``` or use these credentials
