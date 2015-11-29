@@ -63,6 +63,22 @@ To set hostname, just add a record like the following example to your computer's
 192.168.20.10 mage.dev
 ```
 
+## Database Access
+
+### MySQL 
+
+- Hostname: localhost or 127.0.0.1
+- Username: root
+- Password: root
+- Database: scotchbox
+
+## SSH Access
+User simple command for ssh into box ``` vagrant ssh ``` or use these credentials
+- Hostname: 127.0.0.1:2222
+- Username: vagrant
+- Password: vagrant
+
+
  [1]: https://www.vagrantup.com/downloads.html
  [2]: http://magento.com
  [3]: https://getcomposer.org
