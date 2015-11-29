@@ -69,8 +69,8 @@ To set hostname, just add a record like the following example to your computer's
 
 - Hostname: localhost or 127.0.0.1
 - Username: root
-- Password: root
-- Database: scotchbox
+- Password: mysql
+- Database: magebox
 
 ## SSH Access
 User simple command for ssh into box ``` vagrant ssh ``` or use these credentials
