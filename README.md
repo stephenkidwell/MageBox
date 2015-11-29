@@ -1,9 +1,7 @@
 # MageBox
-===========
 MageBox is a dead simple [Vagrant][1] LAMP Box for [Magento][2] 2 Development with tools like [Composer][3], [Nodejs][4] &amp; [Git][5]. This box is inspired from [Scotch Box](https://github.com/scotch-io/scotch-box/).
 
 ## Features
-===========
 - Ubuntu 14.04 LTS (Trusty Tahir x64)
 - Apache v2.4
 - PHP v5.6
@@ -16,16 +14,15 @@ MageBox is a dead simple [Vagrant][1] LAMP Box for [Magento][2] 2 Development wi
 
 
 ## Installation
-===========
 
-### Box Installation
+#### Box Installation
 * Download and Install [Vagrant][1]
 * Download and Install [VirtualBox][6]
 * Clone the MageBox [GitHub Repository](https://github.com/IamSwap/MageBox)
 * Run ``` vagrant up ```
 * Access Your Project at  [http://192.168.20.10/][7]
 
-### Magento Installation
+#### Magento Installation
 * Change current directory to ``` cd public ```
 * Clone Magento Repository ``` git clone https://github.com/magento/magento2 --depth=1 . ```
 * Run ``` composer install ``` & Follow installation [instructions](http://devdocs.magento.com/guides/v2.0/install-gde/prereq/dev_install.html).
@@ -33,7 +30,6 @@ MageBox is a dead simple [Vagrant][1] LAMP Box for [Magento][2] 2 Development wi
 
 
 ## Basic Vagrant Commands
-==========
 Here are some useful basic vagrant commands.
 
 ### Start or resume your server
@@ -58,7 +54,6 @@ vagrant ssh
 
 
 ## Setting a Hostname
-============
 To set hostname, just add a record like the following example to your computer's host file.
 
 ```bash
