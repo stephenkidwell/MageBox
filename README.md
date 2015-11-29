@@ -21,6 +21,8 @@ MageBox is a dead simple [Vagrant][1] LAMP Box for [Magento][2] 2 Development wi
 * Clone the MageBox [GitHub Repository](https://github.com/IamSwap/MageBox) ``` git clone https://github.com/IamSwap/MageBox project-name ```
 * Change current directory to project ``` cd project-name ```
 * Run ``` vagrant up ```
+* Make public directory ``` mkdir public ```
+* Place your project files into public directory
 * Access Your Project at  [http://192.168.20.10/][7]
 
 #### Magento Installation
