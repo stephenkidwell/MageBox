@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Magebox 2.0 by IamSwap</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Magebox 2.0</h1>
+        <p>A Simple Vagrant Box for Magento 2 with LEMP</p>
+
+        <p class="view"><a href="https://github.com/IamSwap/MageBox">View the Project on GitHub <small>IamSwap/MageBox</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/IamSwap/MageBox/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/IamSwap/MageBox/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/IamSwap/MageBox">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="what-is-magebox-20-introduction" class="anchor" href="#what-is-magebox-20-introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is Magebox 2.0 (Introduction)</h1>
+
+<p>MageBox is a dead simple <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> LAMP Box for <a href="http://magento.com">Magento</a> 2 Development with tools like <a href="https://getcomposer.org">Composer</a>, <a href="https://nodejs.org">Nodejs</a> &amp; <a href="https://git-scm.com">Git</a>. This box is inspired from <a href="https://github.com/scotch-io/scotch-box/">Scotch Box</a>.</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Ubuntu 14.04 LTS Trusty Tahir</li>
+<li>Nginx v1.4.6</li>
+<li>MySQL v5.6.30</li>
+<li>PHP v7.0</li>
+<li>Composer v1.0</li>
+<li>Node v5.10.1</li>
+<li>NPM v3.8.3</li>
+<li>Git v1.9.1</li>
+<li>PhpMyAdmin</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<h4>
+<a id="box-installation" class="anchor" href="#box-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Box Installation</h4>
+
+<ul>
+<li>Download and Install <a href="https://www.vagrantup.com/downloads.html">Vagrant</a>
+</li>
+<li>Download and Install <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>
+</li>
+<li>Clone the MageBox <a href="https://github.com/IamSwap/MageBox">GitHub Repository</a> <code>git clone https://github.com/IamSwap/MageBox project-name</code>
+</li>
+<li>Change current directory to project <code>cd project-name</code>
+</li>
+<li>Run <code>vagrant up</code>
+</li>
+<li>You can place your project files into <code>public</code> directory or proceed for magento installation</li>
+<li>Access Your Project at  <a href="http://192.168.20.10/">http://192.168.33.10/</a>
+</li>
+</ul>
+
+<h4>
+<a id="magento-installation" class="anchor" href="#magento-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Magento Installation</h4>
+
+<ul>
+<li>Run <code>vagrant ssh</code>
+</li>
+<li>Change current directory to <code>cd /home/vagrant/public</code>
+</li>
+<li>Clone Magento Repository <code>git clone https://github.com/magento/magento2 --depth=1 .</code>
+</li>
+<li>Run <code>composer install</code> &amp; Follow installation <a href="http://devdocs.magento.com/guides/v2.0/install-gde/prereq/dev_install.html">instructions</a>.</li>
+</ul>
+
+<h2>
+<a id="basic-vagrant-commands" class="anchor" href="#basic-vagrant-commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic Vagrant Commands</h2>
+
+<p>Here are some useful basic vagrant commands.</p>
+
+<h4>
+<a id="start-or-resume-your-server" class="anchor" href="#start-or-resume-your-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Start or resume your server</h4>
+
+<div class="highlight highlight-source-shell"><pre>vagrant up</pre></div>
+
+<h4>
+<a id="pause-your-server" class="anchor" href="#pause-your-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pause your server</h4>
+
+<div class="highlight highlight-source-shell"><pre>vagrant <span class="pl-c1">suspend</span></pre></div>
+
+<h4>
+<a id="delete-your-server" class="anchor" href="#delete-your-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Delete your server</h4>
+
+<div class="highlight highlight-source-shell"><pre>vagrant destroy</pre></div>
+
+<h4>
+<a id="ssh-into-your-server" class="anchor" href="#ssh-into-your-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SSH into your server</h4>
+
+<div class="highlight highlight-source-shell"><pre>vagrant ssh</pre></div>
+
+<h2>
+<a id="setting-a-hostname" class="anchor" href="#setting-a-hostname" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting a Hostname</h2>
+
+<p>To set hostname, just add a record like the following example to your computer's host file.</p>
+
+<div class="highlight highlight-source-shell"><pre>192.168.33.10 mage.dev</pre></div>
+
+<h2>
+<a id="database-access" class="anchor" href="#database-access" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Database Access</h2>
+
+<h4>
+<a id="mysql" class="anchor" href="#mysql" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MySQL</h4>
+
+<ul>
+<li>Hostname: localhost or 127.0.0.1</li>
+<li>Username: root</li>
+<li>Password: root</li>
+<li>Database: magento</li>
+</ul>
+
+<h4>
+<a id="phpmyadmin" class="anchor" href="#phpmyadmin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PhpMyAdmin</h4>
+
+<p>Access PhpMyAdmin at <a href="http://192.168.33.10/phpmyadmin/">http://192.168.33.10/phpmyadmin/</a></p>
+
+<ul>
+<li>Username: root</li>
+<li>Password: root</li>
+</ul>
+
+<h2>
+<a id="ssh-access" class="anchor" href="#ssh-access" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SSH Access</h2>
+
+<p>User simple command for ssh into box <code>vagrant ssh</code> or use these credentials</p>
+
+<ul>
+<li>Hostname: 127.0.0.1:2222</li>
+<li>Username: vagrant</li>
+<li>Password: vagrant</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/IamSwap">IamSwap</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
