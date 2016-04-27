@@ -1,14 +1,14 @@
-# MageBox
+# What is Magebox 2.0 (Introduction)
 MageBox is a dead simple [Vagrant][1] LAMP Box for [Magento][2] 2 Development with tools like [Composer][3], [Nodejs][4] &amp; [Git][5]. This box is inspired from [Scotch Box](https://github.com/scotch-io/scotch-box/).
 
 ## Features
-- Ubuntu 14.04 LTS (Trusty Tahir x64)
-- Apache v2.4
-- PHP v5.6
-- MySQL v5.6
+- Ubuntu 14.04 LTS Trusty Tahir
+- Nginx v1.4.6
+- MySQL v5.6.30
+- PHP v7.0
 - Composer v1.0
-- Node v0.10.25
-- NPM v1.3.10
+- Node v5.10.1
+- NPM v3.8.3
 - Git v1.9.1
 - PhpMyAdmin
 
@@ -21,12 +21,12 @@ MageBox is a dead simple [Vagrant][1] LAMP Box for [Magento][2] 2 Development wi
 * Clone the MageBox [GitHub Repository](https://github.com/IamSwap/MageBox) ``` git clone https://github.com/IamSwap/MageBox project-name ```
 * Change current directory to project ``` cd project-name ```
 * Run ``` vagrant up ```
-* You can place your project files into public directory or proceed for magento installation
-* Access Your Project at  [http://192.168.20.10/][7]
+* You can place your project files into ``` public ``` directory or proceed for magento installation
+* Access Your Project at  [http://192.168.33.10/][7]
 
 #### Magento Installation
 * Run ``` vagrant ssh ```
-* Change current directory to ``` cd /var/www/public ```
+* Change current directory to ``` cd /home/vagrant/public ```
 * Clone Magento Repository ``` git clone https://github.com/magento/magento2 --depth=1 . ```
 * Run ``` composer install ``` & Follow installation [instructions](http://devdocs.magento.com/guides/v2.0/install-gde/prereq/dev_install.html).
 
@@ -60,7 +60,7 @@ vagrant ssh
 To set hostname, just add a record like the following example to your computer's host file.
 
 ```bash
-192.168.20.10 mage.dev
+192.168.33.10 mage.dev
 ```
 
 ## Database Access
@@ -68,13 +68,13 @@ To set hostname, just add a record like the following example to your computer's
 #### MySQL 
 - Hostname: localhost or 127.0.0.1
 - Username: root
-- Password: mysql
-- Database: magebox
+- Password: root
+- Database: magento
 
 #### PhpMyAdmin
-Access PhpMyAdmin at [http://192.168.20.10/phpmyadmin/](http://192.168.20.10/phpmyadmin/)
+Access PhpMyAdmin at [http://192.168.33.10/phpmyadmin/](http://192.168.33.10/phpmyadmin/)
 - Username: root
-- Password: mysql
+- Password: root
 
 
 ## SSH Access
