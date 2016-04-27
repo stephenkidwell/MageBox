@@ -1,4 +1,4 @@
-# What is Magebox 2.0 (Introduction)
+# Magebox 2.0
 MageBox is a dead simple [Vagrant][1] LAMP Box for [Magento][2] 2 Development with tools like [Composer][3], [Nodejs][4] &amp; [Git][5]. This box is inspired from [Scotch Box](https://github.com/scotch-io/scotch-box/).
 
 ## Features
