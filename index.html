@@ -28,24 +28,27 @@
         </ul>
       </header>
       <section>
-        <h1>
-<a id="what-is-magebox-20-introduction" class="anchor" href="#what-is-magebox-20-introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is Magebox 2.0 (Introduction)</h1>
+        <h2>
+<a id="what-is-magebox-20-introduction" class="anchor" href="#what-is-magebox-20-introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is Magebox 2.0 (Introduction)</h2>
 
-<p>MageBox is a dead simple <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> LAMP Box for <a href="http://magento.com">Magento</a> 2 Development with tools like <a href="https://getcomposer.org">Composer</a>, <a href="https://nodejs.org">Nodejs</a> &amp; <a href="https://git-scm.com">Git</a>. This box is inspired from <a href="https://github.com/scotch-io/scotch-box/">Scotch Box</a>.</p>
+<p>MageBox is a simple <a href="https://www.vagrantup.com/downloads.html">Vagrant</a> Box for <a href="http://magento.com">Magento</a> 2 Development with LEMP (Linux, Nginx, MySQL &amp; PHP) &amp; tools like <a href="https://getcomposer.org">Composer</a>, <a href="https://nodejs.org">Nodejs</a> &amp; <a href="https://git-scm.com">Git</a>.
+Many Magento 2 developers faces troubles to get Magento 2 running on their local machine &amp; I myself have faced them too. This is Vagrant box is made to save the precious time of Magento developers, so that they can focus on their development instead of configuring LEMP stack for Magento 2.</p>
 
 <h2>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+<a id="whats-new-in-magebox-20-aka-features" class="anchor" href="#whats-new-in-magebox-20-aka-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What's new in Magebox 2.0 (aka Features)</h2>
+
+<p>Magebox 2.0 now has a Nginx as webserver for faster performance. And since Magento 2.0 has support for PHP7, so we are using latest PHP7 instead of older version. Here are tools/software used in Magebox 2.0.</p>
 
 <ul>
-<li>Ubuntu 14.04 LTS Trusty Tahir</li>
-<li>Nginx v1.4.6</li>
-<li>MySQL v5.6.30</li>
-<li>PHP v7.0</li>
-<li>Composer v1.0</li>
-<li>Node v5.10.1</li>
-<li>NPM v3.8.3</li>
-<li>Git v1.9.1</li>
-<li>PhpMyAdmin</li>
+<li><a href="http://www.ubuntu.com">Ubuntu 14.04 LTS Trusty Tahir</a></li>
+<li><a href="http://nginx.org/en/">Nginx v1.4.6</a></li>
+<li><a href="https://www.mysql.com/">MySQL v5.6.30</a></li>
+<li><a href="http://php.net">PHP v7.0</a></li>
+<li><a href="http://getcomposer.org">Composer v1.1</a></li>
+<li><a href="https://nodejs.org/en/">Node v5.10.1</a></li>
+<li><a href="https://www.npmjs.com/">NPM v3.8.3</a></li>
+<li><a href="https://git-scm.com">Git v1.9.1</a></li>
+<li><a href="https://www.phpmyadmin.net/">PhpMyAdmin</a></li>
 </ul>
 
 <h2>
@@ -66,27 +69,30 @@
 <li>Run <code>vagrant up</code>
 </li>
 <li>You can place your project files into <code>public</code> directory or proceed for magento installation</li>
-<li>Access Your Project at  <a href="http://192.168.20.10/">http://192.168.33.10/</a>
+<li>Access Your Project at  <a href="http://192.168.33.10/">http://192.168.33.10/</a>
 </li>
 </ul>
 
 <h4>
 <a id="magento-installation" class="anchor" href="#magento-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Magento Installation</h4>
 
+<p>You can place your Magento installation at <code>public</code> directory or follow these steps.</p>
+
 <ul>
 <li>Run <code>vagrant ssh</code>
 </li>
 <li>Change current directory to <code>cd /home/vagrant/public</code>
 </li>
-<li>Clone Magento Repository <code>git clone https://github.com/magento/magento2 --depth=1 .</code>
+<li>Clone Magento Repository <code>git clone -b 2.0 https://github.com/magento/magento2 --depth=1 .</code>
 </li>
 <li>Run <code>composer install</code> &amp; Follow installation <a href="http://devdocs.magento.com/guides/v2.0/install-gde/prereq/dev_install.html">instructions</a>.</li>
+<li>For info follow this tutorial on <a href="https://swapnil.co/blog/magento/install-magento-2/306">How to install Magento in developer machine</a>.</li>
 </ul>
 
 <h2>
 <a id="basic-vagrant-commands" class="anchor" href="#basic-vagrant-commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic Vagrant Commands</h2>
 
-<p>Here are some useful basic vagrant commands.</p>
+<p>Here are some useful basic vagrant commands to get you running with Vagrant.</p>
 
 <h4>
 <a id="start-or-resume-your-server" class="anchor" href="#start-or-resume-your-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Start or resume your server</h4>
@@ -111,7 +117,7 @@
 <h2>
 <a id="setting-a-hostname" class="anchor" href="#setting-a-hostname" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting a Hostname</h2>
 
-<p>To set hostname, just add a record like the following example to your computer's host file.</p>
+<p>If you would like to use <code>http://mage.dev</code> as local domain/hostname for your project, just add a record like the following example to your computer's host file.</p>
 
 <div class="highlight highlight-source-shell"><pre>192.168.33.10 mage.dev</pre></div>
 
@@ -131,7 +137,7 @@
 <h4>
 <a id="phpmyadmin" class="anchor" href="#phpmyadmin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PhpMyAdmin</h4>
 
-<p>Access PhpMyAdmin at <a href="http://192.168.33.10/phpmyadmin/">http://192.168.33.10/phpmyadmin/</a></p>
+<p>You can access PhpMyAdmin at <a href="http://192.168.33.10/phpmyadmin/">http://192.168.33.10/phpmyadmin/</a> or <a href="http://mage.dev/phpmyadmin/">http://mage.dev/phpmyadmin/</a> after setting hostname. </p>
 
 <ul>
 <li>Username: root</li>
